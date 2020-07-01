@@ -1,0 +1,38 @@
+﻿<Window x:Class="StoreApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StoreApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid>
+        <Border Padding="3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Padding="3 3 6 3">
+                    <StackPanel>
+                        <Button Content="Add New Item"/>
+                    </StackPanel>
+                </Border>
+                
+                <DataGrid Name="grid1" Grid.Column="1" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding ItemId}" Header="ItemId" Width="0.1*"/>
+                        <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="0.3*"/>
+                        <DataGridTextColumn Binding="{Binding Price}" Header="Price" Width="0.2*"/>
+                        <DataGridTextColumn Binding="{Binding StorageId}" Header="Storage" Width="0.1*"/>
+                        <DataGridTextColumn Binding="{Binding CategoryId}" Header="Category" Width="0.1*"/>
+                        <DataGridTextColumn Binding="{Binding MovingToCategoryDate}" Header="Moving to category date" Width="0.3*"/>
+                    </DataGrid.Columns>
+                    
+                </DataGrid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
