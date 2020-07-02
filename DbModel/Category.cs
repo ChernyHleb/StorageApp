@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace StoreApp.DbModel
 {
-    public class Category
+    public class Category : DbObject
     {
         [Key]
         public int CategoryId { get; set; }

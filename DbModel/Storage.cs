@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace StoreApp.DbModel
 {
-    public class Storage
+    public class Storage : DbObject
     {
         [Key]
         public int StorageId { get; set; }
