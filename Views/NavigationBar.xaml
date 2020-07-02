@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="StoreApp.Views.NavigationBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StoreApp.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    <Border Padding="3">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="0">
+                <TextBlock  Text="Storage" Margin="0 0 50 0"/>
+                <ComboBox>
+                    <TextBlock Text="Moscow" VerticalAlignment="Top"/>
+                </ComboBox>
+            </StackPanel>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <RadioButton Grid.Column="0" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Assepted Items"
+                             Command="{Binding UpdateViewCommand}" CommandParameter="AsseptedItems"/>
+                <RadioButton Grid.Column="1" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Items on Store"
+                             Command="{Binding UpdateViewCommand}" CommandParameter="StorageItems"/>
+                <RadioButton Grid.Column="2" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Sold Items"/>
+                <RadioButton Grid.Column="3" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Report"/>
+            </Grid>
+        </Grid>
+    </Border>
+</UserControl>

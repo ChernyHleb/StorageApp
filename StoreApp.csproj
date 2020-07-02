@@ -66,6 +66,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\UpdateViewCommand.cs" />
+    <Compile Include="ViewModels\AsseptedItemsViewModel.cs" />
+    <Compile Include="ViewModels\StorageItemsViewModel.cs" />
+    <Compile Include="Views\AsseptedItemsView.xaml.cs">
+      <DependentUpon>AsseptedItemsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NavigationBar.xaml.cs">
+      <DependentUpon>NavigationBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\StorageItemsView.xaml.cs">
+      <DependentUpon>StorageItemsView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\AsseptedItemsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NavigationBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -78,12 +100,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\StorageItemsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbModel\Category.cs" />
     <Compile Include="DbModel\CodeFirstContext.cs" />
     <Compile Include="DbModel\Item.cs" />
     <Compile Include="DbModel\Storage.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -112,11 +140,7 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="TestSQLQuery.sql" />
   </ItemGroup>
