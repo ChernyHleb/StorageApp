@@ -6,7 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace StoreApp.ViewModels
-{
+{ 
+    /// Parent class for all ViewModels
     public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;

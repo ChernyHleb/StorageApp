@@ -34,8 +34,10 @@
                              Command="{Binding UpdateViewCommand}" CommandParameter="AsseptedItems"/>
                 <RadioButton Grid.Column="1" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Items on Store"
                              Command="{Binding UpdateViewCommand}" CommandParameter="StorageItems"/>
-                <RadioButton Grid.Column="2" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Sold Items"/>
-                <RadioButton Grid.Column="3" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Report"/>
+                <RadioButton Grid.Column="2" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Sold Items"
+                             Command="{Binding UpdateViewCommand}" CommandParameter="SoldItems"/>
+                <RadioButton Grid.Column="3" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Report"
+                             Command="{Binding UpdateViewCommand}" CommandParameter="Report"/>
             </Grid>
         </Grid>
     </Border>

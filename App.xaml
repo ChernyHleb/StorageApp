@@ -15,5 +15,14 @@
         <DataTemplate DataType="{x:Type viewModels:StorageItemsViewModel}">
             <views:StorageItemsView/>
         </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModels:ReportViewModel}">
+            <views:ReportView/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModels:SoldItemsViewModel}">
+            <views:SoldItemsView/>
+        </DataTemplate>
+
     </Application.Resources>
 </Application>

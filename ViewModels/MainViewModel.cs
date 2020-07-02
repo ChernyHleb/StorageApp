@@ -8,6 +8,9 @@ namespace StoreApp.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
+        /// This ViewModel contains general application
+        /// Controls navigation between other viewmodels
+         
         private ViewModelBase _selectedViewModel;
 
         public ViewModelBase SelectedViewModel
@@ -16,7 +19,7 @@ namespace StoreApp.ViewModels
             set
             {
                 _selectedViewModel = value;
-                OnPropertyChanged(nameof(_selectedViewModel));
+                OnPropertyChanged(nameof(SelectedViewModel));
             }
         }
 

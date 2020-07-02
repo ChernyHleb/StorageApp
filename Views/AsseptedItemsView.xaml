@@ -32,7 +32,6 @@
                         <DataGridTextColumn Binding="{Binding CategoryId}" Header="Category" Width="0.1*"/>
                         <DataGridTextColumn Binding="{Binding MovingToCategoryDate}" Header="Moving to category date" Width="0.3*"/>
                     </DataGrid.Columns>
-
                 </DataGrid>
             </Grid>
         </Border>

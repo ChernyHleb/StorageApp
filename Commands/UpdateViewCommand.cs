@@ -33,6 +33,14 @@ namespace StoreApp.Commands
             {
                 viewModel.SelectedViewModel = new StorageItemsViewModel();
             }
+            else if(parameter.ToString() == "Report")
+            {
+                viewModel.SelectedViewModel = new ReportViewModel();
+            }
+            else if(parameter.ToString() == "SoldItems")
+            {
+                viewModel.SelectedViewModel = new SoldItemsViewModel();
+            }
               
         }
     }
