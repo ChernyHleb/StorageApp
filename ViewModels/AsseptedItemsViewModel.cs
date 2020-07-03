@@ -8,5 +8,11 @@ namespace StoreApp.ViewModels
 {
     class AsseptedItemsViewModel : ViewModelBase
     {
+        public AsseptedItemsViewModel()
+        {
+            //List<DbModel.Item> NewItemList = new List<DbModel.Item>();
+            //NewItemList = (Items.Where(item => item.Category.Name == "Assepted")).ToList<DbModel.Item>();
+            //Items = NewItemList;
+        }
     }
 }

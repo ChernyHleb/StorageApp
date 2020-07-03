@@ -20,11 +20,11 @@
                           CanUserAddRows="False" CanUserDeleteRows="False"
                           CanUserReorderColumns="False" ItemsSource="{Binding Items}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding ItemId}" Header="ItemId" Width="0.1*" CanUserSort="False"/>
+                            <DataGridTextColumn Binding="{Binding ItemId}" Header="Item ID" Width="0.1*" CanUserSort="False"/>
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="0.3*"/>
                             <DataGridTextColumn Binding="{Binding Price}" Header="Price" Width="0.2*"/>
-                            <DataGridTextColumn Binding="{Binding StorageId}" Header="Storage" Width="0.1*"/>
-                            <DataGridTextColumn Binding="{Binding CategoryId}" Header="Category" Width="0.1*"/>
+                            <DataGridTextColumn Binding="{Binding StorageId}" Header="Storage ID" Width="0.1*"/>
+                            <!--<DataGridTextColumn Binding="{Binding CategoryId}" Header="Category" Width="0.1*"/>-->
                             <DataGridTextColumn Binding="{Binding MovingToCategoryDate}" Header="Moving to category date" Width="0.3*"/>
                         </DataGrid.Columns>
                     </DataGrid>

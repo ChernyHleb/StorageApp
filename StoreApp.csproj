@@ -66,6 +66,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\ComplexCommand.cs" />
+    <Compile Include="Commands\FilterGridCommand.cs" />
     <Compile Include="Commands\UpdateViewCommand.cs" />
     <Compile Include="DbModel\DbObject.cs" />
     <Compile Include="Services\GenericCRUD.cs" />

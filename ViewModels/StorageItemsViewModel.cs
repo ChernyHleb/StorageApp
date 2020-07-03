@@ -8,6 +8,11 @@ namespace StoreApp.ViewModels
 {
     class StorageItemsViewModel :ViewModelBase
     {
-        
+        public StorageItemsViewModel()
+        {
+            //List<DbModel.Item> NewItemList = new List<DbModel.Item>();
+            //NewItemList = (Items.Where(item => item.Category.Name == "OnStore")).ToList<DbModel.Item>();
+            //Items = NewItemList;
+        }
     }
 }

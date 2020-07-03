@@ -9,9 +9,10 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace StoreApp.ViewModels
-{ 
+{
     /// Parent class for all ViewModels
     public abstract class ViewModelBase : INotifyPropertyChanged
     {
@@ -21,6 +22,8 @@ namespace StoreApp.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        public ICommand FilterGridCommand { get; set; }
 
         //protected void BindDataGrid(DataGrid grid, string SQLcmd)
         //{
@@ -41,6 +44,8 @@ namespace StoreApp.ViewModels
         //    grid.ItemsSource = dt.DefaultView;
         //}
 
+
+
         private Services.GenericCRUD<DbModel.Item> ItemsCRUD;
         private Services.GenericCRUD<DbModel.Storage> StoragesCRUD;
         private Services.GenericCRUD<DbModel.Category> CategoriesCRUD;
@@ -54,6 +59,8 @@ namespace StoreApp.ViewModels
         {
             using (var context = new DbModel.CodeFirstContext())
             {
+                FilterGridCommand = new Commands.FilterGridCommand(this);
+
                 ItemsCRUD = new Services.GenericCRUD<DbModel.Item>(context);
                 this.Items = ItemsCRUD.Read();
 

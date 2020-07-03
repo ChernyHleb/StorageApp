@@ -18,10 +18,14 @@
                     <Border Padding="0 3" Grid.Row="0">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
                             <Button>Show:</Button>
-                            <RadioButton GroupName="ShowingMode" Margin="5 0 30 0" Content="All" IsChecked="True"/>
-                            <RadioButton GroupName="ShowingMode" Margin="0 0 30 0" Content="Assepted"/>
-                            <RadioButton GroupName="ShowingMode" Margin="0 0 30 0" Content="On Storage"/>
-                            <RadioButton GroupName="ShowingMode" Margin="0 0 30 0" Content="Sold"/>
+                            <RadioButton GroupName="ShowingMode" Margin="5 0 30 0" Content="All" IsChecked="True"
+                                         Command="{Binding FilterGridCommand}" CommandParameter="All"/>
+                            <RadioButton GroupName="ShowingMode" Margin="0 0 30 0" Content="Assepted"
+                                         Command="{Binding FilterGridCommand}" CommandParameter="Assepted"/>
+                            <RadioButton GroupName="ShowingMode" Margin="0 0 30 0" Content="On Storage"
+                                         Command="{Binding FilterGridCommand}" CommandParameter="OnStore"/>
+                            <RadioButton GroupName="ShowingMode" Margin="0 0 30 0" Content="Sold"
+                                         Command="{Binding FilterGridCommand}" CommandParameter="Sold"/>
 
                             <TextBlock Margin="0 0 5 0">From:</TextBlock>
                             <TextBox Width="50" Margin="0 0 30 0"/>
@@ -35,11 +39,11 @@
                           CanUserAddRows="False" CanUserDeleteRows="False"
                           CanUserReorderColumns="False" ItemsSource="{Binding Items}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Binding="{Binding ItemId}" Header="ItemId" Width="0.1*"/>
+                            <DataGridTextColumn Binding="{Binding ItemId}" Header="Item ID" Width="0.1*"/>
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="0.3*"/>
                             <DataGridTextColumn Binding="{Binding Price}" Header="Price" Width="0.2*"/>
-                            <DataGridTextColumn Binding="{Binding StorageId}" Header="Storage" Width="0.1*"/>
-                            <DataGridTextColumn Binding="{Binding CategoryId}" Header="Category" Width="0.1*"/>
+                            <DataGridTextColumn Binding="{Binding StorageId}" Header="Storage ID" Width="0.1*"/>
+                            <DataGridTextColumn Binding="{Binding CategoryId}" Header="Category ID" Width="0.1*"/>
                             <DataGridTextColumn Binding="{Binding MovingToCategoryDate}" Header="Moving to category date" Width="0.3*"/>
                         </DataGrid.Columns>
                     </DataGrid>
