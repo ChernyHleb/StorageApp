@@ -16,8 +16,9 @@
 
             <StackPanel Orientation="Horizontal" Grid.Row="0">
                 <TextBlock  Text="Storage" Margin="0 0 50 0"/>
-                <ComboBox>
-                    <TextBlock Text="Moscow" VerticalAlignment="Top"/>
+                <ComboBox ItemsSource="{Binding Storages}"
+                          DisplayMemberPath="Name">
+                    <!--<TextBlock Text="Moscow" VerticalAlignment="Top"/>-->
                 </ComboBox>
             </StackPanel>
 
@@ -37,7 +38,7 @@
                 <RadioButton Grid.Column="2" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Sold Items"
                              Command="{Binding UpdateViewCommand}" CommandParameter="SoldItems"/>
                 <RadioButton Grid.Column="3" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Report"
-                             Command="{Binding UpdateViewCommand}" CommandParameter="Report"/>
+                             Command="{Binding UpdateViewCommand}" CommandParameter="Report" IsChecked="True"/>
             </Grid>
         </Grid>
     </Border>

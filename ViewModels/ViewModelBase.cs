@@ -42,8 +42,13 @@ namespace StoreApp.ViewModels
         //}
 
         private Services.GenericCRUD<DbModel.Item> ItemsCRUD;
+        private Services.GenericCRUD<DbModel.Storage> StoragesCRUD;
+        private Services.GenericCRUD<DbModel.Category> CategoriesCRUD;
 
         public List<DbModel.Item> Items { get; set; }
+        public List<DbModel.Storage> Storages { get; set; }
+        public List<DbModel.Category> Categories { get; set; }
+        
 
         public ViewModelBase()
         {
@@ -52,7 +57,15 @@ namespace StoreApp.ViewModels
                 ItemsCRUD = new Services.GenericCRUD<DbModel.Item>(context);
                 this.Items = ItemsCRUD.Read();
 
+                CategoriesCRUD = new Services.GenericCRUD<DbModel.Category>(context);
+                this.Categories = CategoriesCRUD.Read();
+
+                StoragesCRUD = new Services.GenericCRUD<DbModel.Storage>(context);
+                this.Storages = StoragesCRUD.Read();
+
                 //Items.ForEach(i => Console.WriteLine(i.Title));
+                //Categories.ForEach(i => Console.WriteLine(i.Name));
+                //Storages.ForEach(i => Console.WriteLine(i.Name));
             }
         }
     }

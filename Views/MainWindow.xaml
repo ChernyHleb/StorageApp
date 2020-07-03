@@ -16,7 +16,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <views:NavigationBar Grid.Row="0"/>
+        <views:NavigationBar Grid.Row="0" x:Name="NavBar"/>
 
         <ContentControl x:Name="MainControl" Content="{Binding SelectedViewModel}" Grid.Row="1"/>
 
