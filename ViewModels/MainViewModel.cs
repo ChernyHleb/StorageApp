@@ -27,6 +27,7 @@ namespace StoreApp.ViewModels
 
         public MainViewModel()
         {
+            SelectedViewModel = new ReportViewModel();
             UpdateViewCommand = new Commands.UpdateViewCommand(this);
         }
 

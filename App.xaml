@@ -6,7 +6,7 @@
              xmlns:views="clr-namespace:StoreApp.Views"
              xmlns:viewModels="clr-namespace:StoreApp.ViewModels"
              
-             StartupUri="MainWindow.xaml">
+             StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
         <DataTemplate DataType="{x:Type viewModels:AsseptedItemsViewModel}">
             <views:AsseptedItemsView/>

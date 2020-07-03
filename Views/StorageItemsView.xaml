@@ -24,7 +24,7 @@
                     <DataGrid Name="grid1" Grid.Row="1" AutoGenerateColumns="False" 
                           CanUserResizeColumns="False" CanUserResizeRows="False"
                           CanUserAddRows="False" CanUserDeleteRows="False"
-                          CanUserReorderColumns="False">
+                          CanUserReorderColumns="False" ItemsSource="{Binding Items}">
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding ItemId}" Header="ItemId" Width="0.1*" CanUserSort="False"/>
                             <DataGridTextColumn Binding="{Binding Title}" Header="Title" Width="0.3*"/>
