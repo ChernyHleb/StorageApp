@@ -30,8 +30,17 @@ namespace StoreApp.Commands
             if(parameter.ToString() == "InsertItemPage")
             {
                 VM.childWindow = new Views.InsertItemPage(VM);
-                VM.childWindow.ShowDialog();
             }
+            else if(parameter.ToString() == "MoveOnStore")
+            {
+                VM.childWindow = new Views.MoveItemToStoreView(VM);
+            }
+            else if(parameter.ToString() == "Sell")
+            {
+                VM.childWindow = new Views.SellingItemView(VM);
+            }
+
+            VM.childWindow?.ShowDialog();
         }
     }
 }

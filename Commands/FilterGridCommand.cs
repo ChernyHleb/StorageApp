@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace StoreApp.Commands
@@ -49,6 +50,10 @@ namespace StoreApp.Commands
                 else if (parameter.ToString() == "Sold")
                 {
                     _VM.Items = (Items.Where(item => item.Category.Name == "Sold")).ToList<DbModel.Item>();
+                }
+                else if (parameter.ToString() == "DatePeriod")
+                {
+                    
                 }
             }
         }

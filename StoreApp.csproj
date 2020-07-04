@@ -83,6 +83,9 @@
     <Compile Include="Views\InsertItemPage.xaml.cs">
       <DependentUpon>InsertItemPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MoveItemToStoreView.xaml.cs">
+      <DependentUpon>MoveItemToStoreView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NavigationBar.xaml.cs">
       <DependentUpon>NavigationBar.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,9 @@
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\ReportView.xaml.cs">
       <DependentUpon>ReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SellingItemView.xaml.cs">
+      <DependentUpon>SellingItemView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SoldItemsView.xaml.cs">
       <DependentUpon>SoldItemsView.xaml</DependentUpon>
@@ -102,6 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\InsertItemPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MoveItemToStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,6 +132,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\ReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SellingItemView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

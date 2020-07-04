@@ -14,11 +14,18 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Border Padding="0 3" Grid.Row="0">
+                <Border Padding="0 6" Grid.Row="0">
                     <StackPanel Orientation="Horizontal">
                         <Button Content="Add Item" 
                                 Command="{Binding SpawnWindowCommand}" 
-                                CommandParameter="InsertItemPage"/>
+                                CommandParameter="InsertItemPage"
+                                Padding="3 0"/>
+                        
+                        <Button Content="Move On Store"
+                                Margin="5 0 0 0"
+                                Padding="3 0"
+                                Command="{Binding SpawnWindowCommand}"
+                                CommandParameter="MoveOnStore"/>
                     </StackPanel>
                 </Border>
 

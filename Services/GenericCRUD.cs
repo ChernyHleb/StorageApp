@@ -34,6 +34,32 @@ namespace StoreApp.Services
             return entities;
         }
 
+        // BAD UPDATE, REMAKE!
+
+        //public void Update(T entity)
+        //{   
+
+        //    if (entity.GetType().Equals(typeof(Item)))
+        //    {
+                
+        //        int entID = (entity as Item).ItemId;
+        //        Item OldEntity = _context.Set<Item>().FirstOrDefault(e => e.ItemId == entID);
+        //        _context.Set<Item>().Remove(OldEntity);
+        //        _context.Set<Item>().Add(entity as Item);
+        //        //OldEntity = entity as Item;
+        //        _context.SaveChanges();
+        //        Console.WriteLine("@@@@@@@@@@@@@@111");
+        //    }
+        //    else if (entity.GetType().Equals(typeof(Category)))
+        //    {
+        //        throw new Exception("kek");
+        //    }
+        //    else if (entity.GetType().Equals(typeof(Storage)))
+        //    {
+        //        throw new Exception("kek");
+        //    }
+        //}
+
         //public void Delete(int id)
         //{
             

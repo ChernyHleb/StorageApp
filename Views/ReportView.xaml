@@ -26,11 +26,15 @@
                                          Command="{Binding FilterGridCommand}" CommandParameter="OnStore"/>
                             <RadioButton GroupName="ShowingMode" Margin="0 0 30 0" Content="Sold"
                                          Command="{Binding FilterGridCommand}" CommandParameter="Sold"/>
+                            <CheckBox Command="{Binding FilterGridCommand}" 
+                                      CommandParameter="DatePeriod"
+                                      Margin="0 0 5 0"
+                                      x:Name="DateCheckBox"/>
                             <TextBlock Margin="0 0 5 0">PERIOD:</TextBlock>
                             <TextBlock Margin="0 0 5 0">From:</TextBlock>
-                            <TextBox Width="50" Margin="0 0 30 0"/>
+                            <TextBox Width="60" Margin="0 0 30 0" x:Name="FromDateTextBox" Text="7/4/2020"/>
                             <TextBlock Margin="0 0 5 0">To:</TextBlock>
-                            <TextBox Width="50" Margin="0 0 30 0"/>
+                            <TextBox Width="60" Margin="0 0 30 0" x:Name="ToDateTextBox" Text="31/4/2020"/>
                             
                         </StackPanel>
                     </Border>

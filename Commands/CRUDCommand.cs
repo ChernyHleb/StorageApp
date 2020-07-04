@@ -48,6 +48,32 @@ namespace StoreApp.Commands
                 }
                 _viewmodel.FilterGridCommand.Execute("Assepted");
             }
+            else if(parameter.ToString() == "MoveOnStore")
+            {
+                Views.MoveItemToStoreView window = ((Views.MoveItemToStoreView)_viewmodel.childWindow);
+                DbModel.Item SelectedItem = (DbModel.Item)window.ComboBox_ItemSelector.SelectedItem;
+                /// Correct UPDATING !
+                using (var context = new DbModel.CodeFirstContext())
+                {
+                    var item = context.Items.Where(i => i.ItemId == SelectedItem.ItemId).FirstOrDefault();
+                    item.CategoryId = 2;
+                    context.SaveChanges();
+                }
+                _viewmodel.FilterGridCommand.Execute("Assepted");
+            }
+            else if (parameter.ToString() == "Sell")
+            {
+                Views.SellingItemView window = ((Views.SellingItemView)_viewmodel.childWindow);
+                DbModel.Item SelectedItem = (DbModel.Item)window.ComboBox_ItemSelector.SelectedItem;
+                /// Correct UPDATING !
+                using (var context = new DbModel.CodeFirstContext())
+                {
+                    var item = context.Items.Where(i => i.ItemId == SelectedItem.ItemId).FirstOrDefault();
+                    item.CategoryId = 3;
+                    context.SaveChanges();
+                }
+                _viewmodel.FilterGridCommand.Execute("OnStore");
+            }
 
             _viewmodel.childWindow.Close();
         }
