@@ -44,15 +44,30 @@ namespace StoreApp.ViewModels
         //    grid.ItemsSource = dt.DefaultView;
         //}
 
-
-
         private Services.GenericCRUD<DbModel.Item> ItemsCRUD;
         private Services.GenericCRUD<DbModel.Storage> StoragesCRUD;
         private Services.GenericCRUD<DbModel.Category> CategoriesCRUD;
 
-        public List<DbModel.Item> Items { get; set; }
-        public List<DbModel.Storage> Storages { get; set; }
-        public List<DbModel.Category> Categories { get; set; }
+        private List<DbModel.Item> _items;
+        public List<DbModel.Item> Items
+        {
+            get { return _items; }
+            set { _items = value; OnPropertyChanged("Items"); }
+        }
+
+        private List<DbModel.Storage> _storages;
+        public List<DbModel.Storage> Storages
+        {
+            get { return _storages; }
+            set { _storages = value; OnPropertyChanged("Storages"); }
+        }
+
+        private List<DbModel.Category> _categories;
+        public List<DbModel.Category> Categories
+        {
+            get { return _categories; }
+            set { _categories = value; OnPropertyChanged("Categories"); }
+        }
         
 
         public ViewModelBase()
