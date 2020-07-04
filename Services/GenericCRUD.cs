@@ -13,7 +13,7 @@ namespace StoreApp.Services
     /// this class implements crud operations with DbContext 
     /// and notifies if some changes were applied
     /// </summary>
-    class GenericCRUD<T> : INotifyPropertyChanged where T : DbModel.DbObject
+    class GenericCRUD<T> where T : DbModel.DbObject
     {
         private DbModel.CodeFirstContext _context;
 
@@ -22,20 +22,10 @@ namespace StoreApp.Services
             _context = context;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
-        }
-
         public void Create(T entity)
         {
             _context.Set<T>().Add(entity);
             _context.SaveChanges();
-
-            OnPropertyChanged("EntityCreated");
         }
 
         public List<T> Read()

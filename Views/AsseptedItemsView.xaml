@@ -16,7 +16,9 @@
 
                 <Border Padding="0 3" Grid.Row="0">
                     <StackPanel Orientation="Horizontal">
-                        <Button Content="Add Item"/>
+                        <Button Content="Add Item" 
+                                Command="{Binding SpawnWindowCommand}" 
+                                CommandParameter="InsertItemPage"/>
                     </StackPanel>
                 </Border>
 

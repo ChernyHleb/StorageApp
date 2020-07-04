@@ -19,9 +19,10 @@ namespace StoreApp.Views
     /// </summary>
     public partial class InsertItemPage : Window
     {
-        public InsertItemPage()
+        public InsertItemPage(ViewModels.ViewModelBase VM)
         {
             InitializeComponent();
+            DataContext = VM;
         }
     }
 }

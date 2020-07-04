@@ -17,7 +17,7 @@
 
                     <Border Padding="0 3" Grid.Row="0">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
-                            <Button>Show:</Button>
+                            <TextBlock>CATEGORY:</TextBlock>
                             <RadioButton GroupName="ShowingMode" Margin="5 0 30 0" Content="All" IsChecked="True"
                                          Command="{Binding FilterGridCommand}" CommandParameter="All"/>
                             <RadioButton GroupName="ShowingMode" Margin="0 0 30 0" Content="Assepted"
@@ -26,11 +26,12 @@
                                          Command="{Binding FilterGridCommand}" CommandParameter="OnStore"/>
                             <RadioButton GroupName="ShowingMode" Margin="0 0 30 0" Content="Sold"
                                          Command="{Binding FilterGridCommand}" CommandParameter="Sold"/>
-
+                            <TextBlock Margin="0 0 5 0">PERIOD:</TextBlock>
                             <TextBlock Margin="0 0 5 0">From:</TextBlock>
                             <TextBox Width="50" Margin="0 0 30 0"/>
                             <TextBlock Margin="0 0 5 0">To:</TextBlock>
                             <TextBox Width="50" Margin="0 0 30 0"/>
+                            
                         </StackPanel>
                     </Border>
 

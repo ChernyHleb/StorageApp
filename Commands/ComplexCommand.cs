@@ -23,10 +23,12 @@ namespace StoreApp.Commands
             return true;
         }
 
+
         public void Execute(object parameter)
         {
             string[] p = parameter.ToString().Split(' ');
-            for(int i = 0; i < _commands.Count(); i++)
+            
+            for (int i = 0; i < _commands.Count(); i++)
             {
                 _commands[i].Execute(p[i]);
             }

@@ -29,10 +29,10 @@ namespace StoreApp.Commands
 
             using (var context = new DbModel.CodeFirstContext())
             {
-                Services.GenericCRUD<DbModel.Item>  ItemsCRUD = new Services.GenericCRUD<DbModel.Item>(context);
+                Services.GenericCRUD<DbModel.Item> ItemsCRUD = new Services.GenericCRUD<DbModel.Item>(context);
                 Items = ItemsCRUD.Read();
 
-                Console.WriteLine(parameter);
+                Console.WriteLine($"{ parameter}");
 
                 if (parameter.ToString() == "All")
                 {

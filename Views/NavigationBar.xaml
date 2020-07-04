@@ -32,13 +32,13 @@
                 </Grid.ColumnDefinitions>
 
                 <RadioButton Grid.Column="0" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Assepted Items"
-                             Command="{Binding ComplexCommand}" CommandParameter="AsseptedItems Assepted"/>
+                             Command="{Binding UpdateViewCommand}" CommandParameter="AsseptedItems"/>
                 <RadioButton Grid.Column="1" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Items on Store"
-                             Command="{Binding ComplexCommand}" CommandParameter="StorageItems OnStore"/>
+                             Command="{Binding UpdateViewCommand}" CommandParameter="StorageItems"/>
                 <RadioButton Grid.Column="2" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Sold Items"
-                             Command="{Binding ComplexCommand}" CommandParameter="SoldItems Sold"/>
+                             Command="{Binding UpdateViewCommand}" CommandParameter="SoldItems"/>
                 <RadioButton Grid.Column="3" GroupName="ViewsOfItems" Margin="0 0 50 0" Content="Report"
-                             Command="{Binding ComplexCommand}" CommandParameter="Report All" IsChecked="True"/>
+                             Command="{Binding UpdateViewCommand}" CommandParameter="Report" IsChecked="True"/>
             </Grid>
         </Grid>
     </Border>

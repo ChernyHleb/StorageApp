@@ -23,6 +23,7 @@ namespace StoreApp.Views
         public AsseptedItemsView()
         {
             InitializeComponent();
+
         }
     }
 }

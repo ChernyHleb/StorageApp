@@ -28,20 +28,23 @@ namespace StoreApp.Commands
             if(parameter.ToString() == "AsseptedItems")
             {
                 viewModel.SelectedViewModel = new AsseptedItemsViewModel();
+                viewModel.SelectedViewModel.FilterGridCommand.Execute("Assepted");
             }
             else if(parameter.ToString() == "StorageItems")
             {
                 viewModel.SelectedViewModel = new StorageItemsViewModel();
+                viewModel.SelectedViewModel.FilterGridCommand.Execute("OnStore");
             }
             else if(parameter.ToString() == "Report")
             {
                 viewModel.SelectedViewModel = new ReportViewModel();
+                viewModel.SelectedViewModel.FilterGridCommand.Execute("All");
             }
             else if(parameter.ToString() == "SoldItems")
             {
                 viewModel.SelectedViewModel = new SoldItemsViewModel();
+                viewModel.SelectedViewModel.FilterGridCommand.Execute("Sold");
             }
-              
         }
     }
 }

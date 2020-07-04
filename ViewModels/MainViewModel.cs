@@ -24,14 +24,14 @@ namespace StoreApp.ViewModels
         }
 
         public System.Windows.Input.ICommand UpdateViewCommand { get; set; }
-        public System.Windows.Input.ICommand ComplexCommand { get; set; }
+        //public System.Windows.Input.ICommand ComplexCommand { get; set; }
 
         public MainViewModel()
         {
             SelectedViewModel = new ReportViewModel();
             UpdateViewCommand = new Commands.UpdateViewCommand(this);
-
-            ComplexCommand = new Commands.ComplexCommand(UpdateViewCommand, FilterGridCommand);
+            FilterGridCommand = SelectedViewModel.FilterGridCommand;
+            //ComplexCommand = new Commands.ComplexCommand(UpdateViewCommand, SelectedViewModel.FilterGridCommand);
         }
 
     }

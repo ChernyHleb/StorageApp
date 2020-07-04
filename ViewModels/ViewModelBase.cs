@@ -10,6 +10,7 @@ using System.Configuration;
 using System.Data;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows;
 
 namespace StoreApp.ViewModels
 {
@@ -68,14 +69,19 @@ namespace StoreApp.ViewModels
             get { return _categories; }
             set { _categories = value; OnPropertyChanged("Categories"); }
         }
-        
+
+        public Window childWindow;
+        public ICommand SpawnWindowCommand { get; set; }
+        public ICommand CRUDCommand { get; set; }
 
         public ViewModelBase()
         {
+            SpawnWindowCommand = new Commands.SpawnWindowCommand(this);
+            FilterGridCommand = new Commands.FilterGridCommand(this);
+            CRUDCommand = new Commands.CRUDCommand(this);
+
             using (var context = new DbModel.CodeFirstContext())
             {
-                FilterGridCommand = new Commands.FilterGridCommand(this);
-
                 ItemsCRUD = new Services.GenericCRUD<DbModel.Item>(context);
                 this.Items = ItemsCRUD.Read();
 
